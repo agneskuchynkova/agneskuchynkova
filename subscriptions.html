@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Subscriptions — Solstice Roasters Roasters</title>
+  <meta name="description" content="Fresh beans delivered on your schedule with exclusive perks." />
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light dark" />
+<link rel="stylesheet" href="style.css" />
+<script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="Solstice Roasters Roasters home">
+      <span class="logo-mark">◐</span> Solstice Roasters Roasters
+    </a>
+    <button id="menuToggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="primaryNav" class="nav-links">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="brew-guides.html">Brew Guides</a>
+  <a href="subscriptions.html">Subscriptions</a>
+  <a href="cafes.html">Cafés</a>
+  <a href="about.html">About</a>
+  <a href="sustainability.html">Sustainability</a>
+  <a href="blog.html">Blog</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+</nav>
+  </div>
+</header>
+  <main id="main" class="container">
+    <h1>Subscriptions</h1>
+    <div class="grid3 price-grid">
+      <article class="card price">
+        <h2>Single Origin</h2>
+        <p class="price-num">$16 / bag</p>
+        <ul class="list">
+          <li>Light &amp; bright profiles</li>
+          <li>Rotating monthly</li>
+        </ul>
+        <button class="btn subscribe" data-plan="Single Origin">Subscribe</button>
+      </article>
+      <article class="card price popular">
+        <p class="badge">Best value</p>
+        <h2>Roaster's Choice</h2>
+        <p class="price-num">$30 / 2 bags</p>
+        <ul class="list">
+          <li>Balanced crowd-pleasers</li>
+          <li>Early access to releases</li>
+        </ul>
+        <button class="btn subscribe" data-plan="Roaster's Choice">Subscribe</button>
+      </article>
+      <article class="card price">
+        <h2>Espresso</h2>
+        <p class="price-num">$17 / bag</p>
+        <ul class="list">
+          <li>Chocolate-forward blends</li>
+          <li>Dialed for home espresso</li>
+        </ul>
+        <button class="btn subscribe" data-plan="Espresso">Subscribe</button>
+      </article>
+    </div>
+    <p id="sub-msg" class="form-msg" role="status" aria-live="polite"></p>
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Solstice Roasters Roasters</h3>
+      <p>Small-batch coffee roasted with care under the northern lights — bright, complex, and responsibly sourced.</p>
+    </div>
+    <form id="newsletter-form" class="newsletter" novalidate>
+      <label for="newsletter-email">Subscribe for fresh drops</label>
+      <div class="newsletter-row">
+        <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" required aria-required="true" />
+        <button type="submit">Subscribe</button>
+      </div>
+      <p class="form-msg" id="newsletter-msg" role="status" aria-live="polite"></p>
+    </form>
+    <div class="footer-links">
+      <strong>Roastery</strong>
+      <p>42 Polar Ave, Bloomington, IN</p>
+      <p><a href="mailto:hello@auroracoffee.example">hello@auroracoffee.example</a></p>
+      <p><a href="tel:+15550100234">+1 (555) 010-0234</a></p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <small>© <span id="year"></span> Solstice Roasters Roasters • <a href="sustainability.html#ethics">Ethics</a></small>
+  </div>
+</footer>
+</body>
+</html>

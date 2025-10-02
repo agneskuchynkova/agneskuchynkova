@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Shop — Solstice Roasters Roasters</title>
+  <meta name="description" content="Buy fresh-roasted coffee beans and accessories." />
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light dark" />
+<link rel="stylesheet" href="style.css" />
+<script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="Solstice Roasters Roasters home">
+      <span class="logo-mark">◐</span> Solstice Roasters Roasters
+    </a>
+    <button id="menuToggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="primaryNav" class="nav-links">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="brew-guides.html">Brew Guides</a>
+  <a href="subscriptions.html">Subscriptions</a>
+  <a href="cafes.html">Cafés</a>
+  <a href="about.html">About</a>
+  <a href="sustainability.html">Sustainability</a>
+  <a href="blog.html">Blog</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+</nav>
+  </div>
+</header>
+  <main id="main" class="container">
+    <h1>Shop</h1>
+    <input id="shop-search" class="search" type="search" placeholder="Search beans or notes…" aria-label="Search products" />
+    <div id="cart" class="cart" aria-live="polite"></div>
+    <div class="grid3 shop-grid" id="shop-grid">
+      <article class="card product" data-tags="ethiopia light fruity blueberry" id="borealis">
+        <img src="https://images.unsplash.com/photo-1509043759401-136742328bb3?q=80&w=800&auto=format&fit=crop" alt="Bag of coffee labeled Solstice Borealis Blend" loading="lazy" />
+        <h2>Solstice Borealis Blend</h2>
+        <p class="muted">Blueberry · Milk Chocolate · Orange</p>
+        <p class="price-num">$18</p>
+        <button class="btn add-cart" data-name="Solstice Borealis Blend" data-price="18">Add to cart</button>
+      </article>
+      <article class="card product" data-tags="colombia medium chocolate nutty balanced">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800&auto=format&fit=crop" alt="Bag of Colombian coffee" loading="lazy" />
+        <h2>Colombia Huila</h2>
+        <p class="muted">Caramel · Cocoa · Stone Fruit</p>
+        <p class="price-num">$17</p>
+        <button class="btn add-cart" data-name="Colombia Huila" data-price="17">Add to cart</button>
+      </article>
+      <article class="card product" data-tags="ethiopia natural floral fruity light">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop" alt="Ethiopian coffee bag" loading="lazy" />
+        <h2>Ethiopia Yirgacheffe</h2>
+        <p class="muted">Jasmine · Blueberry · Lemon Zest</p>
+        <p class="price-num">$19</p>
+        <button class="btn add-cart" data-name="Ethiopia Yirgacheffe" data-price="19">Add to cart</button>
+      </article>
+      <article class="card product" data-tags="kenya bright citrus berry">
+        <img src="https://images.unsplash.com/photo-1436491911682-72ab1d398f59?q=80&w=800&auto=format&fit=crop" alt="Kenyan coffee bag" loading="lazy" />
+        <h2>Kenya Nyeri</h2>
+        <p class="muted">Blackcurrant · Grapefruit · Honey</p>
+        <p class="price-num">$20</p>
+        <button class="btn add-cart" data-name="Kenya Nyeri" data-price="20">Add to cart</button>
+      </article>
+      <article class="card product" data-tags="decaf swiss water smooth">
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800&auto=format&fit=crop" alt="Decaf coffee bag" loading="lazy" />
+        <h2>Decaf Andes (SWP)</h2>
+        <p class="muted">Toffee · Almond · Gentle</p>
+        <p class="price-num">$18</p>
+        <button class="btn add-cart" data-name="Decaf Andes (SWP)" data-price="18">Add to cart</button>
+      </article>
+      <article class="card product" data-tags="gear grinder accessory">
+        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=800&auto=format&fit=crop" alt="Hand grinder" loading="lazy" />
+        <h2>Hand Grinder</h2>
+        <p class="muted">Stainless steel, conical burrs</p>
+        <p class="price-num">$45</p>
+        <button class="btn add-cart" data-name="Hand Grinder" data-price="45">Add to cart</button>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Solstice Roasters Roasters</h3>
+      <p>Small-batch coffee roasted with care under the northern lights — bright, complex, and responsibly sourced.</p>
+    </div>
+    <form id="newsletter-form" class="newsletter" novalidate>
+      <label for="newsletter-email">Subscribe for fresh drops</label>
+      <div class="newsletter-row">
+        <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" required aria-required="true" />
+        <button type="submit">Subscribe</button>
+      </div>
+      <p class="form-msg" id="newsletter-msg" role="status" aria-live="polite"></p>
+    </form>
+    <div class="footer-links">
+      <strong>Roastery</strong>
+      <p>42 Polar Ave, Bloomington, IN</p>
+      <p><a href="mailto:hello@auroracoffee.example">hello@auroracoffee.example</a></p>
+      <p><a href="tel:+15550100234">+1 (555) 010-0234</a></p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <small>© <span id="year"></span> Solstice Roasters Roasters • <a href="sustainability.html#ethics">Ethics</a></small>
+  </div>
+</footer>
+</body>
+</html>

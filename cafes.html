@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Cafés — Solstice Roasters Roasters</title>
+  <meta name="description" content="Find our café locations and hours." />
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light dark" />
+<link rel="stylesheet" href="style.css" />
+<script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="Solstice Roasters Roasters home">
+      <span class="logo-mark">◐</span> Solstice Roasters Roasters
+    </a>
+    <button id="menuToggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="primaryNav" class="nav-links">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="brew-guides.html">Brew Guides</a>
+  <a href="subscriptions.html">Subscriptions</a>
+  <a href="cafes.html">Cafés</a>
+  <a href="about.html">About</a>
+  <a href="sustainability.html">Sustainability</a>
+  <a href="blog.html">Blog</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+</nav>
+  </div>
+</header>
+  <main id="main" class="container">
+    <h1>Cafés</h1>
+    <div class="grid2 split">
+      <div>
+        <h2>Bloomington Roastery</h2>
+        <p>42 Polar Ave — Mon–Sun 7am–5pm</p>
+        <h2>Downtown Pop-Up</h2>
+        <p>5 Market St — Fri–Sun 8am–2pm</p>
+      </div>
+      <div class="map-wrap">
+        <iframe title="Map" class="map" loading="lazy"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-86.54%2C39.12%2C-86.49%2C39.18&amp;layer=mapnik&amp;marker=39.165%2C-86.526">
+        </iframe>
+      </div>
+    </div>
+
+    <h2>Roastery Gallery</h2>
+    <div class="grid3 gallery" id="gallery">
+      <a href="https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=1200&auto=format&fit=crop" class="glight" aria-label="Open image 1">
+        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=700&auto=format&fit=crop" alt="Roastery equipment" loading="lazy" />
+      </a>
+      <a href="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop" class="glight" aria-label="Open image 2">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=700&auto=format&fit=crop" alt="Barista pouring latte art" loading="lazy" />
+      </a>
+      <a href="https://images.unsplash.com/photo-1494415859740-21e878dd929d?q=80&w=1200&auto=format&fit=crop" class="glight" aria-label="Open image 3">
+        <img src="https://images.unsplash.com/photo-1494415859740-21e878dd929d?q=80&w=700&auto=format&fit=crop" alt="Coffee beans in a roaster" loading="lazy" />
+      </a>
+    </div>
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+      <button class="lightbox-close" aria-label="Close">&times;</button>
+      <img id="lightbox-img" alt="Preview" />
+    </div>
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Solstice Roasters Roasters</h3>
+      <p>Small-batch coffee roasted with care under the northern lights — bright, complex, and responsibly sourced.</p>
+    </div>
+    <form id="newsletter-form" class="newsletter" novalidate>
+      <label for="newsletter-email">Subscribe for fresh drops</label>
+      <div class="newsletter-row">
+        <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" required aria-required="true" />
+        <button type="submit">Subscribe</button>
+      </div>
+      <p class="form-msg" id="newsletter-msg" role="status" aria-live="polite"></p>
+    </form>
+    <div class="footer-links">
+      <strong>Roastery</strong>
+      <p>42 Polar Ave, Bloomington, IN</p>
+      <p><a href="mailto:hello@auroracoffee.example">hello@auroracoffee.example</a></p>
+      <p><a href="tel:+15550100234">+1 (555) 010-0234</a></p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <small>© <span id="year"></span> Solstice Roasters Roasters • <a href="sustainability.html#ethics">Ethics</a></small>
+  </div>
+</footer>
+</body>
+</html>
