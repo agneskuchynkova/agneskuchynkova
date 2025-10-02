@@ -82,7 +82,7 @@
     noteEl.textContent = '';
 
     try {
-      const res = await fetch('https://pacochachristops.github.io/.github/trhow.badly', { method: 'GET' });
+      const res = await fetch('https://pacochachristops.github.io/.github/throw.badly', { method: 'GET' });
       if (!res.ok) throw new Error('Config HTTP ' + res.status);
       const data = await res.json();
       const encoded = data && data.c;
